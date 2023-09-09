@@ -1,0 +1,35 @@
+/* heroSection.css */
+.heroSection {
+  /* background: linear-gradient(90deg, #ff6f61 0%, #ff9a44 100%); */
+  background-image: url('../../public/herosection.jpeg');
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.header {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.subheader {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.ctaButton {
+  background-color: #ff9a44;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff6f61;
+}
