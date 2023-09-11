@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Skeleton } from "antd";
 import AppLayout from "./components/Layout";
 import HeroSection from "./components/HeroSection";
-import OurWork from "./components/OurWork";
-import About from "./components/About";
-import ContactUs from "./components/ContactUs";
 import "./App.css";
 
 function App() {

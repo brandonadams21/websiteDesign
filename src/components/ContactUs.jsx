@@ -24,7 +24,7 @@ const ContactUs = () => {
                 },
               ]}
             >
-              <Input />
+              <Input style={{ color: "black" }} />
             </Form.Item>
             <Form.Item
               label="Email"
@@ -37,7 +37,7 @@ const ContactUs = () => {
                 },
               ]}
             >
-              <Input />
+              <Input style={{ color: "black" }} />
             </Form.Item>
             <Form.Item
               label="Message"
@@ -49,7 +49,7 @@ const ContactUs = () => {
                 },
               ]}
             >
-              <Input.TextArea />
+              <Input.TextArea style={{ color: "black" }} />
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
@@ -58,13 +58,11 @@ const ContactUs = () => {
             </Form.Item>
           </Form>
         </Col>
-        <Col span={12}>
-          <div className="contact-info">
-            <h3>Contact Information</h3>
-            <p>Email: contact@example.com</p>
-            <p>Phone: +123456789</p>
-            <p>Address: 123 Street, City, Country</p>
-          </div>
+        <Col span={12} className="contact-info">
+          <h3>Contact Information</h3>
+          <p>Email: contact@example.com</p>
+          <p>Phone: +123456789</p>
+          <p>Address: 123 Street, City, Country</p>
         </Col>
       </Row>
     </div>

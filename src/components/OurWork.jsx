@@ -6,20 +6,20 @@ const { Meta } = Card;
 
 const projects = [
   {
-    title: "Project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Unique Website Designs",
+    description: "Crafting one-of-a-kind websites tailored to your brand.",
     imageUrl: "https://via.placeholder.com/150",
   },
   {
-    title: "Project 2",
+    title: "Custom Web Development",
     description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Building web solutions that match your specific needs and requirements.",
     imageUrl: "https://via.placeholder.com/150",
   },
   {
-    title: "Project 3",
+    title: "E-commerce Solutions",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "Creating online stores that drive sales and enhance user experiences.",
     imageUrl: "https://via.placeholder.com/150",
   },
 ];
@@ -27,7 +27,7 @@ const projects = [
 const OurWork = () => {
   return (
     <div className="ourWork">
-      <h2>Our Work</h2>
+      <h2>Our Solutions</h2>
       <Row gutter={[16, 16]}>
         {projects.map((project, index) => (
           <Col span={8} key={index}>
