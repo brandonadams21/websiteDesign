@@ -4,22 +4,24 @@ import "../styles/OurWork.css"; // Create a CSS file for styling
 
 const { Meta } = Card;
 
+// Define an array of projects, each representing a different service or offering.
 const projects = [
   {
-    title: "Unique Website Designs",
-    description: "Crafting one-of-a-kind websites tailored to your brand.",
+    title: "Web Support",
+    description:
+      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla.",
     imageUrl: "https://via.placeholder.com/150",
   },
   {
-    title: "Custom Web Development",
+    title: "Custom Work",
     description:
-      "Building web solutions that match your specific needs and requirements.",
+      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla.",
     imageUrl: "https://via.placeholder.com/150",
   },
   {
-    title: "E-commerce Solutions",
+    title: "Responsive Applications",
     description:
-      "Creating online stores that drive sales and enhance user experiences.",
+      " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla.",
     imageUrl: "https://via.placeholder.com/150",
   },
 ];
@@ -27,7 +29,7 @@ const projects = [
 const OurWork = () => {
   return (
     <div className="ourWork">
-      <h2>Our Solutions</h2>
+      <h2>Our Services</h2>
       <Row gutter={[16, 16]}>
         {projects.map((project, index) => (
           <Col span={8} key={index}>

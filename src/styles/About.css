@@ -10,11 +10,11 @@ h2 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 40px;
-  background-image: linear-gradient(90deg, #dc336e 0%, #f78b4b 100%);
+
   -webkit-background-clip: text; /* Safari */
   background-clip: text;
-  -webkit-text-fill-color: transparent; /* Firefox */
-  color: transparent; /* Hide the original text color */
+
+  color: #B31942; /* Hide the original text color */
 }
 
 .aboutUs-image {
