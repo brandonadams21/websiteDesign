@@ -1,10 +1,11 @@
 /* heroSection.css */
 .heroSection {
   /* background: linear-gradient(90deg, #ff6f61 0%, #ff9a44 100%); */
-  background-image: url('../../public/herosection.jpeg');
-  color: #fff;
+  background-color: #29324b;
+
   padding: 100px 0;
   text-align: center;
+  height: 100vh;
 }
 
 .header {
@@ -12,15 +13,27 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
+  -webkit-background-clip: text; /* Safari */
+  background-clip: text;
+ 
+  color: white; /* Hide the original text color */
 }
 
 .subheader {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 20px;
   margin-bottom: 30px;
+  background-image: linear-gradient(90deg, #f26e53 0%, #fec43d 100%);
+  -webkit-background-clip: text; /* Safari */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Firefox */
+  color: transparent; /* Hide the original text color */
 }
 
 .ctaButton {
-  background-color: #ff9a44;
+  background-color: #B31942;
   color: #fff;
   font-size: 18px;
   padding: 12px 24px;

@@ -71,7 +71,7 @@ const AppLayout = ({ children }) => {
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        Clarksville Web Design © {new Date().getFullYear()}
+        Brandon Adams Web Template © {new Date().getFullYear()}
       </Footer>
     </Layout>
   );

@@ -15,6 +15,7 @@ const ContactUs = () => {
         <Col span={12}>
           <Form name="contact-form" onFinish={onFinish} layout="vertical">
             <Form.Item
+              style={{ marginLeft: "20px" }}
               label="Name"
               name="name"
               rules={[
@@ -24,9 +25,10 @@ const ContactUs = () => {
                 },
               ]}
             >
-              <Input />
+              <Input style={{ color: "black" }} />
             </Form.Item>
             <Form.Item
+              style={{ marginLeft: "20px" }}
               label="Email"
               name="email"
               rules={[
@@ -37,9 +39,10 @@ const ContactUs = () => {
                 },
               ]}
             >
-              <Input />
+              <Input style={{ color: "black" }} />
             </Form.Item>
             <Form.Item
+            style={{marginLeft: '20px'}}
               label="Message"
               name="message"
               rules={[
@@ -49,7 +52,7 @@ const ContactUs = () => {
                 },
               ]}
             >
-              <Input.TextArea />
+              <Input.TextArea style={{ color: "black", height: '100px' }} />
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
@@ -58,13 +61,11 @@ const ContactUs = () => {
             </Form.Item>
           </Form>
         </Col>
-        <Col span={12}>
-          <div className="contact-info">
-            <h3>Contact Information</h3>
-            <p>Email: contact@example.com</p>
-            <p>Phone: +123456789</p>
-            <p>Address: 123 Street, City, Country</p>
-          </div>
+        <Col span={12} className="contact-info">
+          <h3>Contact Information</h3>
+          <p>Email: email@email.com</p>
+          <p>Phone: 123-456-7890</p>
+          <p>Address: New York, NY</p>
         </Col>
       </Row>
     </div>
