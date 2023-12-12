@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Skeleton } from "antd";
 import AppLayout from "./components/Layout";
 import HeroSection from "./components/HeroSection";
+import Skills from "./components/Skills"
 import "./App.css";
+import { ThemeProvider } from './components/ThemeContext.jsx';
 
 function App() {
   // State to track whether the app is loading
@@ -20,20 +22,22 @@ function App() {
       {isLoading ? (
         // Display Skeleton placeholders for each component while loading
         <>
-          <Skeleton active paragraph={{ rows: 4 }} />
-          <Skeleton active paragraph={{ rows: 8 }} />
-          <Skeleton active paragraph={{ rows: 6 }} />
-          <Skeleton active paragraph={{ rows: 10 }} />
+          <Skeleton active round={{ rows: 4 }} />
+          <Skeleton active round={{ rows: 8 }} />
+          <Skeleton active round={{ rows: 6 }} />
+          <Skeleton active round={{ rows: 10 }} />
         </>
       ) : (
         // Render the app content when not loading
-        <AppLayout>
-          <HeroSection />
-          {/* <OurWork />
+        <ThemeProvider>
+          <AppLayout>
+            <HeroSection />
+            {/* <OurWork />
           <About />
           <ContactUs /> */}
-          {/* Add components for Our Work, About Us, and Contact Us here */}
-        </AppLayout>
+            {/* Add components for Our Work, About Us, and Contact Us here */}
+          </AppLayout>
+        </ThemeProvider>
       )}
     </div>
   );

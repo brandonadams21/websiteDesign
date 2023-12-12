@@ -1,0 +1,63 @@
+/* ourWork.css */
+.ourWork {
+  padding: 80px 0;
+  text-align: center;
+  min-height: 100vh; /* Use minimum height instead of fixed height */
+}
+
+.dark .ourWork {
+  font-family: 'Audiowide';
+}
+
+/* Light theme specific background image */
+.light .ourWork {
+    font-family: 'VT323';
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #af62ff !important;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%; /* Full width of the container */
+  margin-bottom: 20px; /* Space between cards */
+}
+
+.ant-card-body {
+  background-color: #04c4ca !important;
+  border: none !important;
+}
+
+:where(.css-dev-only-do-not-override-18iikkb).ant-card-bordered {
+  border: none !important;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  justify-content: center; /* Center cards vertically */
+  margin: auto; /* Auto margins for horizontal centering */
+  max-width: 600px; /* Max width for responsiveness */
+  padding: 20px; /* Padding around the container */
+  border: 4px solid #04c4ca;
+  border-radius: 10px;
+}
+
+
+/* Adjust card styles as needed */
+.card {
+  flex: 0 0 calc(20% - 20px); /* 20% width with some margin */
+  margin-bottom: 20px; /* Add margin between cards */
+}
