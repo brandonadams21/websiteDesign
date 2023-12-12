@@ -1,11 +1,24 @@
 /* heroSection.css */
 .heroSection {
   /* background: linear-gradient(90deg, #ff6f61 0%, #ff9a44 100%); */
-  background-color: #29324b;
-
+  /* background-color: #29324b; */
+  background-size: cover;
   padding: 100px 0;
   text-align: center;
   height: 100vh;
+  color: #FF007F;
+}
+
+/* Dark theme specific background image */
+.dark .heroSection {
+  background-image: url('../../public/images/hero-img.webp');
+  font-family: 'Audiowide';
+}
+
+/* Light theme specific background image */
+.light .heroSection {
+  background-image: url('../../public/images/retro-hero-img.png');
+    font-family: 'VT323';
 }
 
 .header {
@@ -16,7 +29,7 @@
   -webkit-background-clip: text; /* Safari */
   background-clip: text;
  
-  color: white; /* Hide the original text color */
+
 }
 
 .subheader {
@@ -25,11 +38,7 @@
   margin-right: auto;
   font-size: 20px;
   margin-bottom: 30px;
-  background-image: linear-gradient(90deg, #f26e53 0%, #fec43d 100%);
-  -webkit-background-clip: text; /* Safari */
-  background-clip: text;
-  -webkit-text-fill-color: transparent; /* Firefox */
-  color: transparent; /* Hide the original text color */
+
 }
 
 .ctaButton {

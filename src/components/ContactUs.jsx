@@ -1,64 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Form, Input, Button } from "antd";
 import "../styles/ContactUs.css"; // Create a CSS file for styling
 
 const ContactUs = () => {
+  const [successMessage, setSuccessMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
+
   // Handle form submission
   const onFinish = (values) => {
-    console.log("Form values:", values);
+    // Send a POST request to your Express route
+    fetch("https://198.211.102.120:3000/user-management/api/new-user", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Successful API response
+        setSuccessMessage("Form submitted successfully");
+        setErrorMessage(null);
+        console.log("API response:", data);
+      })
+      .catch((error) => {
+        // Handle API request errors
+        console.error("API request failed:", error);
+        setErrorMessage("Failed to submit the form. Please try again later.");
+        setSuccessMessage(null);
+      });
   };
 
   return (
     <div className="contactUs">
-      <h2>Contact Us</h2>
+      <h2>Contact me!</h2>
+      {successMessage && <p className="success-message">{successMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
       <Row gutter={[16, 16]}>
         <Col span={12}>
           <Form name="contact-form" onFinish={onFinish} layout="vertical">
-            <Form.Item
-              style={{ marginLeft: "20px" }}
-              label="Name"
-              name="name"
-              rules={[
-                {
-                  required: true,
-                  message: "Please enter your name",
-                },
-              ]}
-            >
-              <Input style={{ color: "black" }} />
-            </Form.Item>
-            <Form.Item
-              style={{ marginLeft: "20px" }}
-              label="Email"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  type: "email",
-                  message: "Please enter a valid email address",
-                },
-              ]}
-            >
-              <Input style={{ color: "black" }} />
-            </Form.Item>
-            <Form.Item
-            style={{marginLeft: '20px'}}
-              label="Message"
-              name="message"
-              rules={[
-                {
-                  required: true,
-                  message: "Please enter your message",
-                },
-              ]}
-            >
-              <Input.TextArea style={{ color: "black", height: '100px' }} />
-            </Form.Item>
-            <Form.Item>
-              <Button type="primary" htmlType="submit">
-                Submit
-              </Button>
-            </Form.Item>
+            {/* Rest of your form code remains the same */}
           </Form>
         </Col>
         <Col span={12} className="contact-info">

@@ -6,6 +6,15 @@
   height: 100vh;
 }
 
+.dark .contactUs {
+  font-family: 'Audiowide';
+}
+
+/* Light theme specific background image */
+.light .contactUs {
+    font-family: 'VT323';
+}
+
 h2 {
   font-size: 36px;
   font-weight: bold;
