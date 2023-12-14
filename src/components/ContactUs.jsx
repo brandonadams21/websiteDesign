@@ -1,10 +1,19 @@
 import React, { useState } from "react";
-import { Row, Col, Form, Input, Button } from "antd";
+import { Row, Col, Form, Input, Button, InputNumber } from "antd";
 import "../styles/ContactUs.css"; // Create a CSS file for styling
 
 const ContactUs = () => {
   const [successMessage, setSuccessMessage] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
+
+  const layout = {
+    labelCol: {
+      span: 8,
+    },
+    wrapperCol: {
+      span: 16,
+    },
+  };
 
   // Handle form submission
   const onFinish = (values) => {
@@ -37,24 +46,38 @@ const ContactUs = () => {
       });
   };
 
+  const validateMessages = {
+    required: "${label} is required!",
+    types: {
+      email: "${label} is not a valid email!",
+      number: "${label} is not a valid number!",
+    },
+    number: {
+      range: "${label} must be between ${min} and ${max}",
+    },
+  };
+
   return (
     <div className="contactUs">
       <h2>Contact me!</h2>
       {successMessage && <p className="success-message">{successMessage}</p>}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <Row gutter={[16, 16]}>
-        <Col span={12}>
-          <Form name="contact-form" onFinish={onFinish} layout="vertical">
-            {/* Rest of your form code remains the same */}
-          </Form>
-        </Col>
-        <Col span={12} className="contact-info">
-          <h3>Contact Information</h3>
-          <p>Email: email@email.com</p>
-          <p>Phone: 123-456-7890</p>
-          <p>Address: New York, NY</p>
-        </Col>
-      </Row>
+      <form>
+        <div>
+          <input placeholder="Name" />
+        </div>
+        <div>
+          <input placeholder="Email" />
+        </div>
+        <div>
+          <textarea placeholder="Message" />
+        </div>
+        <div>
+          <button>
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
