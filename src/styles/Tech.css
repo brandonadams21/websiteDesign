@@ -1,0 +1,39 @@
+.skills-container {
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 2px solid transparent; /* Set by inline style for each tech */
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+}
+
+/* .tech span {
+  margin-left: 8px;
+} */
+
+@media (max-width: 768px) {
+  .technologies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

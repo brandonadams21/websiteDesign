@@ -1,55 +1,70 @@
 import React from "react";
-import { Card, Row, Col } from "antd";
-import "../styles/Experience.css"; // Create a CSS file for styling
-
-const { Meta } = Card;
+import "../styles/Experience.css"; // Assuming you will update this CSS file as described below
 
 const Experience = () => {
-  const cardStyle = {
-    // width: '80%', // Set the width as per your preference
-    marginLeft: '15%',
-    marginRight: '15%',
-    justifyContent: 'center',
-    
-  };
-
   return (
     <div className="ourWork">
       <h2 style={{ fontSize: "56px" }}>Projects</h2>
-      <Row gutter={16}>
-        {/* Add gutter for spacing between columns */}
-        <Col xs={24} sm={12} md={12} lg={12} xl={12}>
-          {/* Define column widths for responsiveness */}
-          <Card
-            hoverable
-            cover={<img alt="example" src="/images/sat_img.png" />}
-            style={cardStyle}
-          >
-            <Meta
-              title="SAT by VK Integrated Systems"
-              description="https://sat.vkintsys.com"
-            />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} md={12} lg={12} xl={12}>
-          <Card
-            hoverable
-            cover={<img alt="example" src="/images/sat_img.png" />}
-            style={cardStyle}
-          >
-            <Meta title="TAK Stack" description="www.instagram.com" />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} md={12} lg={12} xl={12}>
-          <Card
-            hoverable
-            cover={<img alt="example" src="/images/sat_img.png" />}
-            style={cardStyle}
-          >
-            <Meta title="MARS" description="Mars" />
-          </Card>
-        </Col>
-      </Row>
+      <div className="cardsGrid">
+        <div className="card">
+          <img
+            src="/images/sat_img.png"
+            alt="SAT by VK Integrated Systems"
+            style={{ width: "100%", borderRadius: "10px" }}
+          />
+          <div className="card-header">SAT</div>
+
+          <p>
+            Team Awarness Kit (TAK) servers as a service. A full stack
+            application using a MERN stack to deploy automated servers within
+            minutes!
+          </p>
+          <button className="visit-btn">Visit Website!</button>
+        </div>
+        <div className="card">
+          <img
+            src="/images/sat_img.png"
+            alt="SAT by VK Integrated Systems"
+            style={{ width: "100%", borderRadius: "10px" }}
+          />
+          <div className="card-header">TAK Stack</div>
+          <p>
+            Team Awarness Kit (TAK) servers as a service. A full stack
+            application using a MERN stack to deploy automated servers within
+            minutes!
+          </p>
+          <button className="visit-btn">Visit on Android!</button>
+          <button className="visit-btn">Visit on iOS!</button>
+        </div>
+        <div className="card">
+          <img
+            src="/images/sat_img.png"
+            alt="SAT by VK Integrated Systems"
+            style={{ width: "100%", borderRadius: "10px" }}
+          />
+          <div className="card-header">MARS</div>
+          <p>
+            Team Awarness Kit (TAK) servers as a service. A full stack
+            application using a MERN stack to deploy automated servers within
+            minutes!
+          </p>
+          <button className="visit-btn">Contact for a demo!</button>
+        </div>
+        <div className="card">
+          <img
+            src="/images/sat_img.png"
+            alt="SAT by VK Integrated Systems"
+            style={{ width: "100%", borderRadius: "10px" }}
+          />
+          <div className="card-header">MARS</div>
+          <p>
+            Team Awarness Kit (TAK) servers as a service. A full stack
+            application using a MERN stack to deploy automated servers within
+            minutes!
+          </p>
+          <button className="visit-btn">Contact for a demo!</button>
+        </div>
+      </div>
     </div>
   );
 };
