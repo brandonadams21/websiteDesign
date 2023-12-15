@@ -6,7 +6,7 @@
 
 .technologies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Increased min width */
   grid-gap: 10px;
   justify-items: center;
   align-items: center;
@@ -17,23 +17,38 @@
 
 .tech {
   display: flex;
-  align-items: center;
+  flex-direction: row; /* Align items in a row */
   justify-content: center;
+  align-items: center;
   padding: 10px;
-  border: 2px solid transparent; /* Set by inline style for each tech */
+  border: 2px solid transparent;
   border-radius: 10px;
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  width: 100%;
+  font-size: 1rem; /* Start with a reasonable font size */
+  min-width: 150px; /* Adjust based on your content */
+  white-space: nowrap; /* Keep text in one line */
 }
 
-/* .tech span {
+.tech span {
   margin-left: 8px;
-} */
+}
+
+/* Adjust font size at different breakpoints */
+@media (max-width: 1024px) {
+  .tech {
+    font-size: 1rem;
+  }
+}
 
 @media (max-width: 768px) {
-  .technologies-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  .tech {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech {
+    font-size: 1rem;
   }
 }
