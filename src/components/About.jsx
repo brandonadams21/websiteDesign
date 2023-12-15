@@ -6,35 +6,36 @@ const AboutUs = () => {
     <div className="aboutUs">
       <h2>Experience</h2>
       <div className="timeline">
+        {/* Add timeline items here */}
         <div className="timeline-item">
           <div className="timeline-content right">
-            <h2>Lead Full Stack Software Developer</h2>
+            <div className="date right">2023-present</div>
             <h3>VK Integrated Systems</h3>
-            <p>2023-present</p>
+            <p>Lead Full Stack Software Developer</p>
           </div>
         </div>
         <div className="timeline-item">
           <div className="timeline-content left">
-            <h2>Full Stack Software Developer</h2>
+            <div className="date left">2022-2023</div>
             <h3>Joint Special Operations Command, United States Army</h3>
-            <p>2022-2023</p>
+            <p>Full Stack Software Developer</p>
           </div>
         </div>
         <div className="timeline-item">
           <div className="timeline-content left">
-            <h2>Penn State University</h2>
-            <h3>Software Engineering</h3>
-            <p>2022-Present</p>
+            <div className="date left">2022-2023</div>
+            <h3>Joint Special Operations Command, United States Army</h3>
+            <p>Full Stack Software Developer</p>
           </div>
         </div>
         <div className="timeline-item">
           <div className="timeline-content left">
-            <h2>Galavnize Inc.</h2>
-            <h3>Software Development Immersive Course</h3>
-            <p>2022-2022</p>
+            <div className="date left">2022-2023</div>
+            <h3>Joint Special Operations Command, United States Army</h3>
+            <p>Full Stack Software Developer</p>
           </div>
         </div>
-        {/* Add more timeline items here */}
+        {/* Repeat the structure for other items */}
       </div>
     </div>
   );
