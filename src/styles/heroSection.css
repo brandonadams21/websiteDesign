@@ -1,24 +1,24 @@
 /* heroSection.css */
 .heroSection {
-  /* background: linear-gradient(90deg, #ff6f61 0%, #ff9a44 100%); */
-  /* background-color: #29324b; */
   background-size: cover;
   padding: 100px 0;
   text-align: center;
-  height: 100vh;
   color: #FF007F;
+
 }
 
 /* Dark theme specific background image */
 .dark .heroSection {
   background-image: url('../../public/images/modern.png');
   font-family: 'Audiowide';
+  background-size: 100%;
 }
 
 /* Light theme specific background image */
 .light .heroSection {
   background-image: url('../../public/images/retro-hero-img.png');
     font-family: 'VT323';
+    background-size: 100%;
 }
 
 .header {

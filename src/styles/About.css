@@ -5,6 +5,15 @@
   min-height: 100vh;
 }
 
+.dark .aboutUs {
+  font-family: 'Audiowide';
+}
+
+/* Light theme specific background image */
+.light .aboutUs {
+    font-family: 'VT323';
+}
+
 h2 {
 
   margin-bottom: 40px;

@@ -101,7 +101,7 @@ const AppLayout = ({ children }) => {
           <ContactUs />
         </div>
       </Content>
-      <Footer
+      {/* <Footer
         style={{
           textAlign: "center",
           backgroundColor: "#141414",
@@ -109,7 +109,7 @@ const AppLayout = ({ children }) => {
         }}
       >
         Brandon Adams Software Developer Portfolio © {new Date().getFullYear()}
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 };

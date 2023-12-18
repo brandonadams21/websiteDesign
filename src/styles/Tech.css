@@ -4,6 +4,15 @@
   min-height: 100vh;
 }
 
+.dark .skills-container {
+  font-family: 'Audiowide';
+}
+
+/* Light theme specific background image */
+.light .skills-container {
+    font-family: 'VT323';
+}
+
 .technologies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Increased min width */
