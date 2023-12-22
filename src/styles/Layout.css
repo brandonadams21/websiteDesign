@@ -1,14 +1,14 @@
 /* In your CSS file */
 .dark {
   /* Dark theme styles */
-  background-color: #070d22;
-  color: #ff6da1;
+  background-color: transparent;
+  color: #025A4e;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .light {
   /* Light theme styles */
-  background-color: #0f0020;
-  color: #ff6da1;
-  font-family: 'VT323';
+   background-color: transparent;
+  color: #025A4e;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

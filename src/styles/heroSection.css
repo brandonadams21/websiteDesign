@@ -1,35 +1,28 @@
 /* heroSection.css */
 .heroSection {
-  background-size: cover;
   padding: 100px 0;
-  text-align: center;
-  color: #FF007F;
-
+  color: #025A4e;
+  min-height: 80vh;
 }
 
 /* Dark theme specific background image */
 .dark .heroSection {
-  background-image: url('../../public/images/modern.png');
-  font-family: 'Audiowide';
+  /* background-image: url('../../public/images/modern.png'); */
+  font-family: 'Roboto';
   background-size: 100%;
 }
 
 /* Light theme specific background image */
 .light .heroSection {
-  background-image: url('../../public/images/retro-hero-img.png');
-    font-family: 'VT323';
-    background-size: 100%;
+  /* background-image: url('../../public/images/retro-hero-img.png'); */
+    font-family: 'Roboto';
 }
 
 .header {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  -webkit-background-clip: text; /* Safari */
-  background-clip: text;
- 
-
+    
 }
 
 .subheader {

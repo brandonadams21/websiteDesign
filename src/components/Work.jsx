@@ -1,27 +1,22 @@
 import React from "react";
-import "../styles/Experience.css"; // Assuming you will update this CSS file as described below
+import "../styles/Work.css"; // Assuming you will update this CSS file as described below
 
-const Experience = () => {
+const Work = () => {
   return (
     <div className="ourWork">
-      <h2 style={{ fontSize: "56px" }}>Projects</h2>
+      <h2 style={{ fontSize: "56px" }}>Work</h2>
       <div className="cardsGrid">
-        <div className="card">
+        <div className="card-sat">
+          <div className="card-header">VK Integrated Systems</div>
+          <div className="card-header">SAT</div>
           <img
             src="/images/sat_img.png"
             alt="SAT by VK Integrated Systems"
             style={{ width: "100%", borderRadius: "10px" }}
           />
-          <div className="card-header">SAT</div>
-
-          <p>
-            Team Awarness Kit (TAK) servers as a service. A full stack
-            application using a MERN stack to deploy automated servers within
-            minutes!
-          </p>
-          <button className="visit-btn">Visit Website!</button>
+        
         </div>
-        <div className="card">
+        <div className="card-2">
           <img
             src="/images/sat_img.png"
             alt="SAT by VK Integrated Systems"
@@ -36,7 +31,7 @@ const Experience = () => {
           <button className="visit-btn">Visit on Android!</button>
           <button className="visit-btn">Visit on iOS!</button>
         </div>
-        <div className="card">
+        <div className="card-3">
           <img
             src="/images/sat_img.png"
             alt="SAT by VK Integrated Systems"
@@ -50,7 +45,7 @@ const Experience = () => {
           </p>
           <button className="visit-btn">Contact for a demo!</button>
         </div>
-        <div className="card">
+        <div className="card-4">
           <img
             src="/images/sat_img.png"
             alt="SAT by VK Integrated Systems"
@@ -69,4 +64,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Work;

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../styles/heroSection.css";
 import { ThemeContext } from "./ThemeContext";
-import Typewriter from "./Typewriter";
 
 const HeroSection = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -12,12 +11,11 @@ const HeroSection = () => {
 
   return (
     <div className="heroSection">
-      <h1 className="header">
-        <Typewriter text="Dive into the Digital Dystopia" delay={100} />
-      </h1>
-      <button className="brk-btn" onClick={toggleTheme}>
+      <h1 className="header">Hey, I'm Brandon.</h1>
+      <h1 className="header">Software Developer.</h1>
+      {/* <button className="brk-btn" onClick={toggleTheme}>
         {theme === "light" ? "Modern" : "Retro"}
-      </button>
+      </button> */}
     </div>
   );
 };

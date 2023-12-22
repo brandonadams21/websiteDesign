@@ -1,0 +1,44 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Set a fixed height for the navbar */
+  transition: all 0.3s; /* Smooth transition for background and height */
+  z-index: 10; /* To keep the navbar on top of other content */
+  margin-top: 50px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-child {
+  display: grid;
+  margin-right: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.navbar-child:last-child {
+  margin-right: 0; /* Removes the margin on the last child to prevent extra spacing */
+}
+
+.navbar-child.active {
+  background-color: #fff; /* Active bubble background color */
+  border-radius: 20px;
+  padding: 5px 15px; /* Reduced padding for a smaller active bubble */
+}
+
+.navbar.scrolled {
+  background-color: rgba(225, 225, 225, 0.67); /* Semi-transparent white background */
+  min-width: 50%; /* Smaller width for the background */
+  height: 50px; /* Smaller height when scrolled */
+  border-radius: 20px;
+  margin: 0 auto; /* Center the navbar with the smaller width */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+  margin-top: 50px;
+}
