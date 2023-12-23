@@ -1,28 +1,31 @@
 /* heroSection.css */
 .heroSection {
-  padding: 100px 0;
-  color: #025A4e;
-  min-height: 80vh;
+  color: #025a4e;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
 }
 
 /* Dark theme specific background image */
 .dark .heroSection {
   /* background-image: url('../../public/images/modern.png'); */
-  font-family: 'Roboto';
+  font-family: "Roboto";
   background-size: 100%;
 }
 
 /* Light theme specific background image */
 .light .heroSection {
   /* background-image: url('../../public/images/retro-hero-img.png'); */
-    font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .header {
   font-size: 48px;
   font-weight: bold;
-  margin-bottom: 20px;
-    
+  margin: 0; /* Remove default margin */
 }
 
 .subheader {
@@ -31,11 +34,10 @@
   margin-right: auto;
   font-size: 20px;
   margin-bottom: 30px;
-
 }
 
 .ctaButton {
-  background-color: #B31942;
+  background-color: #b31942;
   color: #fff;
   font-size: 18px;
   padding: 12px 24px;
@@ -87,4 +89,48 @@
 }
 .brk-btn:hover::after {
   left: 80%;
+}
+
+.text {
+  color: #025a4e;
+  text-decoration: none;
+  
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  display: inline-block;
+  font-size: 56px;
+}
+
+.text:hover {
+  animation: rubberBand 0.9s;
+  color: rgb(118, 170, 117);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hero-p {
+  margin-top: 100px;
+  width: 40%;
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  35% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  45% {
+    transform: scale3d(0.75, 1, 1);
+  }
+  60% {
+    transform: scale3d(1.2, 0.8, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }

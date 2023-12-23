@@ -10,9 +10,10 @@
   transition: all 0.3s; /* Smooth transition for background and height */
   z-index: 10; /* To keep the navbar on top of other content */
   margin-top: 50px;
-  width: 50%;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 20px;
 }
 
 .navbar-child {
@@ -24,21 +25,26 @@
 }
 
 .navbar-child:last-child {
-  margin-right: 0; /* Removes the margin on the last child to prevent extra spacing */
+  margin-right: 0;
 }
 
 .navbar-child.active {
-  background-color: #fff; /* Active bubble background color */
+  background-color: #fff;
   border-radius: 20px;
-  padding: 5px 15px; /* Reduced padding for a smaller active bubble */
+  padding: 5px 15px;
+  transition: all 0.3s;
 }
 
+/* need a media query for navbar.scrolled and navbar child at 500px width  */
+
 .navbar.scrolled {
-  background-color: rgba(225, 225, 225, 0.67); /* Semi-transparent white background */
-  min-width: 50%; /* Smaller width for the background */
-  height: 50px; /* Smaller height when scrolled */
+  background-color: rgba(225, 225, 225, 0.67);
+  min-width: 466px;
+  max-width: 500px;
+  height: 50px; 
   border-radius: 20px;
-  margin: 0 auto; /* Center the navbar with the smaller width */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
   margin-top: 50px;
+  backdrop-filter: blur(20px) saturate(1.7); /* this is so nice!! */
 }

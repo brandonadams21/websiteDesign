@@ -4,9 +4,12 @@ import React, { useState, useEffect } from "react";
 import { Skeleton } from "antd";
 import AppLayout from "./components/Layout";
 import HeroSection from "./components/HeroSection";
+import ContactUs from "./components/ContactUs";
+import Layout from "./components/Layout";
 import "./App.css";
 import { ThemeProvider } from "./components/ThemeContext.jsx";
 import GradientBackground from "./components/GradientBackground";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   // State to track whether the app is loading
@@ -26,7 +29,6 @@ function App() {
       </div>
       <div className="app-content">
         {isLoading ? (
-          // Display Skeleton placeholders for each component while loading
           <>
             <Skeleton active round={{ rows: 4 }} />
             <Skeleton active round={{ rows: 8 }} />
@@ -34,16 +36,17 @@ function App() {
             <Skeleton active round={{ rows: 10 }} />
           </>
         ) : (
-          // Render the app content when not loading
-          <ThemeProvider>
-            <AppLayout>
-              <HeroSection />
-              {/* <OurWork />
-          <About />
-          <ContactUs /> */}
-              {/* Add components for Our Work, About Us, and Contact Us here */}
-            </AppLayout>
-          </ThemeProvider>
+          <Router>
+            <ThemeProvider>
+              {/* <AppLayout>
+                
+              </AppLayout> */}
+              <Routes>
+                <Route path="/" exact element={<Layout />} />
+                <Route path="/contact" exact element={<ContactUs />} />
+              </Routes>
+            </ThemeProvider>
+          </Router>
         )}
       </div>
     </div>

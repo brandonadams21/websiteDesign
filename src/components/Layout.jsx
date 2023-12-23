@@ -1,5 +1,6 @@
 import React, { useRef, useContext } from "react";
 import { Layout, Menu } from "antd";
+import HeroSection from "./HeroSection";
 import Work from "./Work";
 import ContactUs from "./ContactUs";
 import {
@@ -10,7 +11,7 @@ import {
 } from "@ant-design/icons";
 import { ThemeContext } from "./ThemeContext";
 import "../styles/Layout.css";
-import Navbar from './Navbar.js';
+import Navbar from "./Navbar.jsx";
 
 const { Header, Content, Footer } = Layout;
 
@@ -30,27 +31,21 @@ const AppLayout = ({ children }) => {
 
   return (
     <Layout className={theme}>
-      <Navbar/>
+      <Navbar />
       <Content>
-        <div ref={homeRef}>{children}</div>
-        
-        <div>
-          <Work />
-        </div>
-
-        <div ref={contactRef}>
-          <ContactUs />
-        </div>
+        <HeroSection />
+        <Work />
+        <ContactUs />
       </Content>
-      {/* <Footer
+      <Footer
         style={{
           textAlign: "center",
-          backgroundColor: "#141414",
-          color: "#04c4ca",
+          backgroundColor: "transparent",
+          color: "#025a4e",
         }}
       >
-        Brandon Adams Software Developer Portfolio © {new Date().getFullYear()}
-      </Footer> */}
+        Brandon Adams © {new Date().getFullYear()}
+      </Footer>
     </Layout>
   );
 };

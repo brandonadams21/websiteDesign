@@ -39,10 +39,10 @@ h2 {
 .input-msg {
   height: 50px;
   background-color: transparent;
-  border: 1px solid #04c4ca;
+  border: 1px solid #025A4e;
   border-radius: 10px;
   margin-bottom: 15px;
-  color: white;
+  color: #025A4e;
   font-size: large;
   padding-left: 10px;
 }
@@ -71,7 +71,9 @@ h2 {
   width: 25%;
   height: 50px;
   background-color: transparent;
-  border: 1px #04c4ca solid;
-  color: white;
+  border: 1px #025A4e solid;
+  color: #025A4e;
+  font-weight: bold;
+  font-size: 20px;
   border-radius: 10px;
 }

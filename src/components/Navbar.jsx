@@ -21,7 +21,20 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleSetActive = (item) => {
+  const handleSetActiveWork = (item) => {
+     window.location.href = "./";
+    setActive(item);
+  };
+  const handleSetActiveAbout = (item) => {
+     window.location.href = "./about";
+    setActive(item);
+  };
+  const handleSetActiveNotes = (item) => {
+     window.location.href = "./notes";
+    setActive(item);
+  };
+  const handleSetActiveContact = (item) => {
+     window.location.href = "./contact";
     setActive(item);
   };
 
@@ -29,25 +42,25 @@ function Navbar() {
     <div className={`navbar ${scroll ? "scrolled" : ""}`}>
       <div
         className={`navbar-child ${active === "Work" ? "active" : ""}`}
-        onClick={() => handleSetActive("Work")}
+        onClick={() => handleSetActiveWork("Work")}
       >
         Work
       </div>
       <div
         className={`navbar-child ${active === "About" ? "active" : ""}`}
-        onClick={() => handleSetActive("About")}
+        onClick={() => handleSetActiveAbout("About")}
       >
         About
       </div>
       <div
         className={`navbar-child ${active === "Notes" ? "active" : ""}`}
-        onClick={() => handleSetActive("Notes")}
+        onClick={() => handleSetActiveNotes("Notes")}
       >
         Notes
       </div>
       <div
         className={`navbar-child ${active === "Contact" ? "active" : ""}`}
-        onClick={() => handleSetActive("Contact")}
+        onClick={() => handleSetActiveContact("Contact")}
       >
         Contact
       </div>

@@ -23,7 +23,7 @@ p {
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-gap: 40px; /* Space between cards */
+  grid-gap: 80px; /* Space between cards */
   margin-top: 20px;
 }
 
@@ -70,10 +70,36 @@ p {
   width: 110%;
 }
 
-.card-header {
-  font-size: 50px;
-  text-align: start;
+.card-sat, .card-2, .card-3, .card-4 {
+  position: relative; /* This ensures that absolute positioning is relative to the card */
+  overflow: hidden; /* This will clip any overflowing content */
+  height: 500px;
+  cursor: pointer;
+  /* ... other styles ... */
+}
+
+.card-sat img, .card-2 img, .card-3 img, .card-4 img {
+  position: absolute;
+  right: -10%; /* Align the image to the right */
+  top: 75%;
+  transform: translateY(-50%); /* This will vertically center the image */
+  width: auto; /* You can adjust this if you want to scale the image */
+  height: 100%; /* Adjust the height to fit the card */
+}
+
+
+.card-header-company {
+  font-size: 20px;
+  text-align: end;
   width: 100%;
+}
+
+.card-header-project {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: end;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 /* Media query for mobile devices */
@@ -81,6 +107,12 @@ p {
   .cardsGrid {
     grid-template-columns: 1fr; /* 1 column on small screens */
   }
+
+  .card-sat, .card-2, .card-3, .card-4 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 }
 
 
