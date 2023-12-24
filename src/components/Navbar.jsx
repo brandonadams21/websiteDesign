@@ -21,46 +21,51 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleSetActiveWork = (item) => {
-     window.location.href = "./";
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    if (currentPath === "/notes") {
+      setActive("Notes");
+    } else if (currentPath === "/about") {
+      setActive("About");
+    } else if (currentPath === "/contact") {
+      setActive("Contact");
+    } else {
+      setActive("Work");
+    }
+  }, [window.location.href]);
+
+  const handleSetActive = (item) => {
     setActive(item);
-  };
-  const handleSetActiveAbout = (item) => {
-     window.location.href = "./about";
-    setActive(item);
-  };
-  const handleSetActiveNotes = (item) => {
-     window.location.href = "./notes";
-    setActive(item);
-  };
-  const handleSetActiveContact = (item) => {
-     window.location.href = "./contact";
-    setActive(item);
+    if (item === 'Work') {
+      window.location.href = './'
+    } else {
+    window.location.href = `./${item.toLowerCase()}`;
+    }
   };
 
   return (
     <div className={`navbar ${scroll ? "scrolled" : ""}`}>
       <div
         className={`navbar-child ${active === "Work" ? "active" : ""}`}
-        onClick={() => handleSetActiveWork("Work")}
+        onClick={() => handleSetActive("Work")}
       >
         Work
       </div>
       <div
         className={`navbar-child ${active === "About" ? "active" : ""}`}
-        onClick={() => handleSetActiveAbout("About")}
+        onClick={() => handleSetActive("About")}
       >
         About
       </div>
       <div
         className={`navbar-child ${active === "Notes" ? "active" : ""}`}
-        onClick={() => handleSetActiveNotes("Notes")}
+        onClick={() => handleSetActive("Notes")}
       >
         Notes
       </div>
       <div
         className={`navbar-child ${active === "Contact" ? "active" : ""}`}
-        onClick={() => handleSetActiveContact("Contact")}
+        onClick={() => handleSetActive("Contact")}
       >
         Contact
       </div>

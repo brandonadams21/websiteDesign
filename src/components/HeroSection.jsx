@@ -1,13 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../styles/heroSection.css";
-import { ThemeContext } from "./ThemeContext";
 
 const HeroSection = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
 
   return (
     <div className="heroSection">
@@ -57,9 +51,6 @@ const HeroSection = () => {
         I'm passionate about crafting experiences that are engaging, accessible,
         and user-centric.
       </p>
-      {/* <button className="brk-btn" onClick={toggleTheme}>
-        {theme === "light" ? "Modern" : "Retro"}
-      </button> */}
     </div>
   );
 };

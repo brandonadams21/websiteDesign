@@ -9,7 +9,6 @@ import {
   UserOutlined,
   ContactsOutlined,
 } from "@ant-design/icons";
-import { ThemeContext } from "./ThemeContext";
 import "../styles/Layout.css";
 import Navbar from "./Navbar.jsx";
 
@@ -27,11 +26,8 @@ const AppLayout = ({ children }) => {
     }
   };
 
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <Layout className={theme}>
-      <Navbar />
+    <Layout style={{backgroundColor: 'transparent'}}>
       <Content>
         <HeroSection />
         <Work />
