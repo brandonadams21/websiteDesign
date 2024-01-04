@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [active, setActive] = useState("Work");
@@ -45,30 +46,50 @@ function Navbar() {
 
   return (
     <div className={`navbar ${scroll ? "scrolled" : ""}`}>
-      <div
+      <Link
+        style={{
+          color: "#025a4e",
+          backgroundColor: "transparent",
+          textDecoration: "none",
+        }}
+        to="/"
         className={`navbar-child ${active === "Work" ? "active" : ""}`}
-        onClick={() => handleSetActive("Work")}
       >
         Work
-      </div>
-      <div
+      </Link>
+      <Link
+        style={{
+          color: "#025a4e",
+          backgroundColor: "transparent",
+          textDecoration: "none",
+        }}
+        to="/about"
         className={`navbar-child ${active === "About" ? "active" : ""}`}
-        onClick={() => handleSetActive("About")}
       >
         About
-      </div>
-      <div
+      </Link>
+      <Link
+        style={{
+          color: "#025a4e",
+          backgroundColor: "transparent",
+          textDecoration: "none",
+        }}
+        to="/notes"
         className={`navbar-child ${active === "Notes" ? "active" : ""}`}
-        onClick={() => handleSetActive("Notes")}
       >
         Notes
-      </div>
-      <div
+      </Link>
+      <Link
+        style={{
+          color: "#025a4e",
+          backgroundColor: "transparent",
+          textDecoration: "none",
+        }}
+        to="/contact"
         className={`navbar-child ${active === "Contact" ? "active" : ""}`}
-        onClick={() => handleSetActive("Contact")}
       >
         Contact
-      </div>
+      </Link>
     </div>
   );
 }

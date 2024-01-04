@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useState, useEffect } from "react";
 import { Layout, Menu } from "antd";
 import HeroSection from "./HeroSection";
 import Work from "./Work";
@@ -19,6 +19,9 @@ const AppLayout = ({ children }) => {
   const experienceRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  const [animateHero, setAnimateHero] = useState(false);
+  const [animateWork, setAnimateWork] = useState(false);
+  const [animateContact, setAnimateContact] = useState(false);
 
   const scrollToRef = (ref) => {
     if (ref.current) {
@@ -26,12 +29,24 @@ const AppLayout = ({ children }) => {
     }
   };
 
+    useEffect(() => {
+      setAnimateHero(true);
+      setAnimateWork(true); 
+      setAnimateContact(true); // could set a timeout on this but it looks weird when it renders in 
+    }, []);
+
   return (
-    <Layout style={{backgroundColor: 'transparent'}}>
+    <Layout style={{ backgroundColor: "transparent" }}>
       <Content>
-        <HeroSection />
-        <Work />
-        <ContactUs />
+        <div className={animateHero ? "animated-section" : ""}>
+          <HeroSection />
+        </div>
+        <div className={animateWork ? "animated-section" : ""}>
+          <Work />
+        </div>
+        <div className={animateContact ? "animated-section" : ""}>
+          <ContactUs />
+        </div>
       </Content>
       <Footer
         style={{

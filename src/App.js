@@ -31,18 +31,15 @@ function App() {
       <div className="app-content">
         {isLoading ? (
           <>
-            <Skeleton active round={{ rows: 4 }} />
+            {/* <Skeleton active round={{ rows: 4 }} />
             <Skeleton active round={{ rows: 8 }} />
             <Skeleton active round={{ rows: 6 }} />
-            <Skeleton active round={{ rows: 10 }} />
+            <Skeleton active round={{ rows: 10 }} /> */}
           </>
         ) : (
           <Router>
           
               <Navbar/>
-              {/* <AppLayout>
-                
-              </AppLayout> */}
               <Routes>
                 <Route path="/" exact element={<Layout />} />
                 <Route path="/about" exact element={<About />} />

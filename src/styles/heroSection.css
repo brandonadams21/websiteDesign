@@ -12,18 +12,18 @@
 /* Dark theme specific background image */
 .dark .heroSection {
   /* background-image: url('../../public/images/modern.png'); */
-  font-family: "Roboto";
+  font-family: 'Signika', serif;
   background-size: 100%;
 }
 
 /* Light theme specific background image */
 .light .heroSection {
   /* background-image: url('../../public/images/retro-hero-img.png'); */
-  font-family: "Roboto";
+  font-family: 'Signika', serif;
 }
 
 .header {
-  font-size: 48px;
+  font-size: 2rem;
   font-weight: bold;
   margin: 0; /* Remove default margin */
 }
@@ -94,12 +94,13 @@
 .text {
   color: #025a4e;
   text-decoration: none;
-  
+  font-family: 'Signika', serif;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
   display: inline-block;
-  font-size: 56px;
+  font-size: max(5vw, 32px);;
+  
 }
 
 .text:hover {

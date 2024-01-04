@@ -2,6 +2,8 @@
   padding: 80px 0;
   text-align: center;
   height: 100vh;
+  color: #025a4e;
+  font-family: 'Signika', serif;
 }
 /* 
 .dark .contactUs {
@@ -45,6 +47,7 @@ h2 {
   color: #025A4e;
   font-size: large;
   padding-left: 10px;
+  font-family: 'Signika', serif;
 }
 
 .input-name {
@@ -76,4 +79,5 @@ h2 {
   font-weight: bold;
   font-size: 20px;
   border-radius: 10px;
+  font-family: 'Signika', serif;
 }
