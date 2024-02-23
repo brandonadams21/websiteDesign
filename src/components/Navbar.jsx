@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [active, setActive] = useState("Work");
   const [scroll, setScroll] = useState(false);
+  const location = useLocation(); // get the current location
 
   useEffect(() => {
     const onScroll = () => {
@@ -22,8 +23,8 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const currentPath = window.location.pathname;
+ useEffect(() => {
+    const currentPath = location.pathname;
     if (currentPath === "/notes") {
       setActive("Notes");
     } else if (currentPath === "/about") {
@@ -33,14 +34,15 @@ function Navbar() {
     } else {
       setActive("Work");
     }
-  }, [window.location.href]);
+  }, [location]); // re-run this effect when location changes
+
 
   const handleSetActive = (item) => {
     setActive(item);
-    if (item === 'Work') {
-      window.location.href = './'
+    if (item === "Work") {
+      window.location.href = "./";
     } else {
-    window.location.href = `./${item.toLowerCase()}`;
+      window.location.href = `./${item.toLowerCase()}`;
     }
   };
 
@@ -49,7 +51,6 @@ function Navbar() {
       <Link
         style={{
           color: "#025a4e",
-          backgroundColor: "transparent",
           textDecoration: "none",
         }}
         to="/"
@@ -60,7 +61,6 @@ function Navbar() {
       <Link
         style={{
           color: "#025a4e",
-          backgroundColor: "transparent",
           textDecoration: "none",
         }}
         to="/about"
@@ -68,21 +68,10 @@ function Navbar() {
       >
         About
       </Link>
+
       <Link
         style={{
           color: "#025a4e",
-          backgroundColor: "transparent",
-          textDecoration: "none",
-        }}
-        to="/notes"
-        className={`navbar-child ${active === "Notes" ? "active" : ""}`}
-      >
-        Notes
-      </Link>
-      <Link
-        style={{
-          color: "#025a4e",
-          backgroundColor: "transparent",
           textDecoration: "none",
         }}
         to="/contact"
