@@ -34,6 +34,8 @@ function Navbar() {
     } else {
       setActive("Work");
     }
+
+    window.scrollTo(0, 0);
   }, [location]); // re-run this effect when location changes
 
 

@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <div className="background-container">
-        <GradientBackground />
+        {/* <GradientBackground /> */}
       </div>
       <div className="app-content">
         {isLoading ? (

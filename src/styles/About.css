@@ -1,0 +1,79 @@
+.about-body {
+  padding: 80px 0;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.about-header {
+  text-align: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #025a4e;
+}
+
+.history-block {
+  background-color: #8fdbc1;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  height: auto;
+}
+
+.history-company {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  height: 10px;
+}
+
+.history-role {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+.history-description {
+  text-align: left;
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
+
+.collab-block {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collab-box {
+  background-color: rgba(225, 225, 225, 0.67);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+  backdrop-filter: blur(20px) saturate(1.7); /* this is so nice!! */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  height: auto;
+}
+
+.collab-number {
+  text-align: left;
+  padding-left: 2%;
+  font-size: 30px;
+  margin-bottom: 2%;
+}
+
+.collab-header {
+  text-align: left;
+  margin-left: 2%;
+  font-size: 25px;
+  margin-bottom: 2%;
+}
+
+.collab-text {
+
+}
